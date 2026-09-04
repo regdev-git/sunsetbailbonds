@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# editor/session state
+/.claude/
+*.log
