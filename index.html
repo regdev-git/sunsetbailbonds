@@ -40,8 +40,10 @@
     text-transform:uppercase; color:var(--muted); margin:52px 0 18px; }
   .sect.first{ margin-top:0; }
   .grid--2{ grid-template-columns:repeat(2,1fr); }
+  .grid--2.grid--3{ grid-template-columns:repeat(3,1fr); }
   .card--pick{ border-color:var(--gold); background:var(--gold-wash); }
   .card .tag--pick{ background:var(--gold); color:var(--navy); }
+  @media (max-width:900px){ .grid--3{ grid-template-columns:1fr 1fr; } }
   @media (max-width:760px){ .grid,.grid--2{ grid-template-columns:1fr; } }
 </style>
 </head>
@@ -53,7 +55,7 @@
   <p class="lede">Партнер обрав напрям <b>Photo</b> — усі наступні сторінки робимо в цьому ж стилі, на тій самій дизайн-системі.</p>
 
   <h3 class="sect first">Обраний напрям</h3>
-  <div class="grid grid--2">
+  <div class="grid grid--2 grid--3">
     <a class="card card--pick" href="sunsetbailbonds-home-v2/">
       <span class="tag tag--pick">Photo — обрано</span>
       <h2>Головна сторінка</h2>
@@ -64,6 +66,12 @@
       <span class="tag">Сторінка</span>
       <h2>About Us</h2>
       <p>Історія компанії, безкоштовний сервіс, «Bail should not be difficult», 30+ років, ліцензії та CBAA, міста LA і OC, відгуки.</p>
+      <span class="go">Відкрити →</span>
+    </a>
+    <a class="card" href="sunsetbailbonds-contact/">
+      <span class="tag">Сторінка</span>
+      <h2>Contact Us</h2>
+      <p>4 великі кнопки-дзвінки, форма звʼязку, 3 офіси з картами Google Maps (Santa Monica, Newport Beach/Irvine, Fullerton), ліцензії.</p>
       <span class="go">Відкрити →</span>
     </a>
   </div>
