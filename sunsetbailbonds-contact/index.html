@@ -625,19 +625,22 @@ section[id]{ scroll-margin-top:92px; }
 
 /* ---------- big click-to-call buttons ------------------------------------ */
 /* Dark navy reads as "the footer colour" wherever it shows up elsewhere on
-   the page, so these use a deep bronze-gold instead -- #7A5A10 keeps white
-   text at 6.4:1 contrast (hover #8C6512 at 5.3:1), navy stays footer-only. */
+   the page -- and a dark bronze-gold stand-in didn't read any better. Light
+   card instead: white, gold border, navy text, same language as the office
+   cards and the licenses block below. */
 .callbig{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
 .callbig > *{ min-width:0; }
 .callbtn{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;
-  background:#7A5A10; border-radius:var(--r); padding:32px 20px;
-  transition:background .16s ease, transform .16s ease; }
-.callbtn:hover{ background:#8C6512; transform:translateY(-3px); }
-.callbtn__ico{ width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.16);
-  color:#fff; display:flex; align-items:center; justify-content:center; }
+  background:#fff; border:1.5px solid var(--gold); border-radius:var(--r); padding:32px 20px;
+  transition:background .16s ease, transform .16s ease, box-shadow .16s ease; }
+.callbtn:hover{ background:var(--gold-wash); transform:translateY(-3px);
+  box-shadow:0 16px 32px -20px rgba(14,53,87,.35); }
+.callbtn__ico{ width:50px; height:50px; border-radius:50%; background:var(--gold-wash);
+  border:1.5px solid var(--gold); color:var(--gold-deep);
+  display:flex; align-items:center; justify-content:center; }
 .callbtn__county{ font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
-  color:rgba(255,255,255,.85); }
-.callbtn__num{ font-family:var(--display); font-size:21px; font-weight:700; color:#fff;
+  color:var(--muted); }
+.callbtn__num{ font-family:var(--display); font-size:21px; font-weight:700; color:var(--navy);
   font-variant-numeric:tabular-nums; }
 .callbig__foot{ margin-top:34px; display:flex; justify-content:center; }
 
@@ -660,16 +663,18 @@ section[id]{ scroll-margin-top:92px; }
 .cform button{ align-self:flex-start; margin-top:4px; border:none; cursor:pointer; }
 .cform__note{ font-size:12.5px; color:var(--muted); margin-top:-6px; }
 
-/* same deep bronze-gold as .callbtn -- see note above the block */
-.cinfo{ background:#7A5A10; color:rgba(255,255,255,.85); border-radius:var(--r); padding:36px; }
-.cinfo h3{ color:#fff; font-size:17px; margin-bottom:10px; }
+/* gold-wash + gold border, like the licenses block below -- a shade warmer
+   than .cform's plain white so the two halves of the row read as distinct */
+.cinfo{ background:var(--gold-wash); border:1.5px solid var(--gold);
+  color:var(--body); border-radius:var(--r); padding:36px; }
+.cinfo h3{ color:var(--navy); font-size:17px; margin-bottom:10px; }
 .cinfo__lede{ font-size:14px; line-height:1.6; margin-bottom:24px; }
 .cinfo__email{ display:block; font-family:var(--display); font-size:19px; font-weight:700;
-  color:#FFDD82; margin-bottom:22px; word-break:break-word; }
-.cinfo__email:hover{ color:#fff; }
-.cinfo__loc{ display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,.85);
-  padding-top:22px; border-top:1px solid rgba(255,255,255,.22); }
-.cinfo__loc svg{ flex:none; color:#FFDD82; }
+  color:var(--blue); margin-bottom:22px; word-break:break-word; }
+.cinfo__email:hover{ color:var(--gold-deep); }
+.cinfo__loc{ display:flex; align-items:center; gap:10px; font-size:14px; color:var(--body);
+  padding-top:22px; border-top:1px solid var(--gold); }
+.cinfo__loc svg{ flex:none; color:var(--gold-deep); }
 .cinfo .live{ margin-top:22px; }
 
 /* ---------- licenses: wide gold-framed band ------------------------------- */
