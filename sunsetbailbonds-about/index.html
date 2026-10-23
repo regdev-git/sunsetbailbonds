@@ -625,6 +625,17 @@ section[id]{ scroll-margin-top:92px; }
 .card .lic{ border-top:1px solid var(--hair); margin-top:0; padding-top:14px; }
 .card .lic + .lic{ margin-top:14px; }
 
+/* ---------- payments accepted ------------------------------------------- */
+.pay{ display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin-top:30px;
+  background:#fff; border:1.5px solid var(--hair); border-radius:var(--r); padding:24px 30px; }
+.pay__lbl{ display:inline-flex; align-items:center; gap:10px; font-size:11.5px; font-weight:800;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--navy); }
+.pay__lbl svg{ flex:none; color:var(--gold-deep); }
+.pay__list{ display:flex; flex-wrap:wrap; gap:9px; }
+.paychip{ font-size:13px; font-weight:700; color:var(--navy); background:var(--sand);
+  border:1px solid var(--hair); border-radius:var(--r-sm); padding:9px 16px; white-space:nowrap; }
+.pay__note{ margin-left:auto; max-width:34ch; font-size:13.5px; color:var(--muted); }
+
 /* ---------- city lists per county ---------------------------------------- */
 .counties{ display:grid; grid-template-columns:1fr 1fr; gap:30px; }
 .counties > *{ min-width:0; }
@@ -662,6 +673,10 @@ section[id]{ scroll-margin-top:92px; }
   .frees{ grid-template-columns:1fr; }
   .county,.card{ padding:26px 22px; }
   .invest{ padding:22px 24px; }
+  /* the auto margin would otherwise strand the note against the right edge
+     once the band has wrapped into a single column */
+  .pay{ padding:22px 24px; gap:16px; }
+  .pay__note{ margin-left:0; max-width:none; }
 }
 </style>
 </head>
@@ -946,6 +961,20 @@ section[id]{ scroll-margin-top:92px; }
         </div>
         <a class="lic" href="https://cbaa.com/" target="_blank" rel="noopener">Member &#8212; California Bail Agents Association<small>cbaa.com &#8599;</small></a>
       </div>
+    </div>
+
+    <div class="pay">
+      <span class="pay__lbl">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+        Payments accepted
+      </span>
+      <div class="pay__list">
+        <span class="paychip">Visa</span>
+        <span class="paychip">Mastercard</span>
+        <span class="paychip">American Express</span>
+        <span class="paychip">PayPal</span>
+      </div>
+      <p class="pay__note">The premium is the 10% set by the state. Flexible payment plans are available &#8212; just ask us.</p>
     </div>
   </div>
 </section>
