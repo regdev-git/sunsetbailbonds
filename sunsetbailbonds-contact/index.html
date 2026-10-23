@@ -668,6 +668,25 @@ section[id]{ scroll-margin-top:92px; }
 .cinfo__loc svg{ flex:none; color:var(--gold); }
 .cinfo .live{ margin-top:22px; }
 
+/* ---------- licenses: wide gold-framed band ------------------------------- */
+.licblock{ display:flex; flex-direction:column; gap:28px; max-width:760px; margin:0 auto;
+  border:2px solid var(--gold); background:var(--gold-wash);
+  border-radius:var(--r); padding:40px 46px; }
+.licblock__hd{ display:flex; align-items:flex-start; gap:18px; }
+.licblock__ico{ width:56px; height:56px; flex:none; border-radius:15px;
+  background:#fff; border:1.5px solid var(--gold); color:var(--gold-deep);
+  display:flex; align-items:center; justify-content:center; }
+.licblock__hd h3{ font-size:21px; letter-spacing:.02em; margin-bottom:8px; }
+.licblock__hd p{ font-size:14.5px; color:var(--body); }
+.licblock__grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.licblock__grid > *{ min-width:0; }
+.licbox{ background:#fff; border:1.5px solid var(--gold); border-radius:var(--r-sm); padding:20px 22px; }
+.licbox b{ display:block; font-size:16px; font-weight:700; color:var(--navy);
+  font-variant-numeric:tabular-nums; margin-bottom:8px; }
+.licbox a.verify{ display:inline-flex; align-items:center; gap:5px; font-size:12.5px;
+  font-weight:700; color:var(--blue); }
+.licbox a.verify:hover{ color:var(--gold-deep); }
+
 /* ---------- offices with an embedded map ---------------------------------- */
 .offices{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
 .offices > *{ min-width:0; }
@@ -705,6 +724,8 @@ section[id]{ scroll-margin-top:92px; }
 @media (max-width:680px){
   .callbig{ grid-template-columns:1fr; }
   .cform, .cinfo{ padding:26px 24px; }
+  .licblock{ padding:28px 24px; gap:22px; }
+  .licblock__grid{ grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -916,16 +937,24 @@ section[id]{ scroll-margin-top:92px; }
      ========================================================================= -->
 <section class="section section--tight" id="licenses" style="background:var(--sand)">
   <div class="wrap">
-    <div class="card" style="max-width:640px;margin:0 auto">
-      <div class="card__hd">
-        <span class="card__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+    <div class="licblock">
+      <div class="licblock__hd">
+        <span class="licblock__ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <div>
           <h3>Licensed &amp; verified</h3>
           <p>Licensed and operating in California since 1993.</p>
         </div>
       </div>
-      <a class="lic" href="https://interactive.web.insurance.ca.gov/apex_extprd/f?p=400:1" target="_blank" rel="noopener">CA Bail Lic. #1841440<small>Verify on cdoi.ca.gov &#8599;</small></a>
-      <a class="lic" href="https://interactive.web.insurance.ca.gov/apex_extprd/f?p=400:1" target="_blank" rel="noopener">CA CPA Lic. #101195<small>Verify on cdoi.ca.gov &#8599;</small></a>
+      <div class="licblock__grid">
+        <div class="licbox">
+          <b>CA Bail Lic. #1841440</b>
+          <a class="verify" href="https://interactive.web.insurance.ca.gov/apex_extprd/f?p=400:1" target="_blank" rel="noopener">Verify on cdoi.ca.gov &#8599;</a>
+        </div>
+        <div class="licbox">
+          <b>CA CPA Lic. #101195</b>
+          <a class="verify" href="https://interactive.web.insurance.ca.gov/apex_extprd/f?p=400:1" target="_blank" rel="noopener">Verify on cdoi.ca.gov &#8599;</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
