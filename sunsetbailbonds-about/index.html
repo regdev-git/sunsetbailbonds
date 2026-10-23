@@ -554,10 +554,11 @@ details[open] summary{ color:var(--gold-deep); }
 }
 
 /* ==========================================================================
-   Sunset Bail Bonds -- About Us page
-   Additions on top of the variant C (Photo) design system. Nothing here
-   restyles the home page's components; these are the blocks the About page
-   needs that the home page does not have.
+   Sunset Bail Bonds -- shared chrome for inner pages (About, Contact, ...)
+   Every inner-page build includes this file after the home page's own
+   <style> block and before its own page-specific CSS. One definition of the
+   page hero / breadcrumbs / generic card, so pages cannot drift apart the
+   way the home page variants did before they shared a build step.
    ========================================================================== */
 
 /* The header is sticky, so an anchor jump parks the section heading behind it.
@@ -595,6 +596,33 @@ section[id]{ scroll-margin-top:92px; }
 .phero__lede{ margin-top:20px; max-width:50ch; font-size:17.5px; color:#EAF3FA;
   text-shadow:0 1px 14px rgba(8,36,56,.55); }
 .phero .ctarow{ margin-top:30px; }
+
+/* ---------- generic bordered card (credentials, info panels, ...) -------- */
+.card{ background:#fff; border:1.5px solid var(--hair); border-radius:var(--r); padding:30px 32px; }
+.card__hd{ display:flex; align-items:flex-start; gap:15px; margin-bottom:18px; }
+.card__ico{ width:48px; height:48px; flex:none; border-radius:13px;
+  background:var(--sky-wash); border:1.5px solid var(--hair-cool); color:var(--blue);
+  display:flex; align-items:center; justify-content:center; }
+.card__hd h3{ font-size:16px; letter-spacing:.04em; margin-bottom:6px; }
+.card__hd p{ font-size:13.5px; color:var(--muted); line-height:1.5; }
+.card .lic{ border-top:1px solid var(--hair); margin-top:0; padding-top:14px; }
+.card .lic + .lic{ margin-top:14px; }
+
+@media (max-width:900px){
+  .phero .wrap{ padding-top:62px; padding-bottom:46px; }
+}
+
+@media (max-width:680px){
+  .card{ padding:26px 22px; }
+}
+
+/* ==========================================================================
+   Sunset Bail Bonds -- About Us page
+   Additions on top of the variant C (Photo) design system, layered after
+   page-common.css (page hero, breadcrumbs, generic .card -- shared with the
+   Contact page so the two cannot drift apart). Nothing here restyles the
+   home page's own components.
+   ========================================================================== */
 
 /* The home page pins its About photo to the top because credential badges sit
    under it. Here the media column holds the photo alone, so let the row's own
@@ -653,17 +681,9 @@ section[id]{ scroll-margin-top:92px; }
 .exp__stats span{ display:block; margin-top:9px; font-size:13.5px; color:var(--body); line-height:1.5; }
 
 /* ---------- credentials: licences + association membership -------------- */
+/* .card itself lives in page-common.css; this page only needs the 2-up grid */
 .creds2{ display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:stretch; }
 .creds2 > *{ min-width:0; }
-.card{ background:#fff; border:1.5px solid var(--hair); border-radius:var(--r); padding:30px 32px; }
-.card__hd{ display:flex; align-items:flex-start; gap:15px; margin-bottom:18px; }
-.card__ico{ width:48px; height:48px; flex:none; border-radius:13px;
-  background:var(--sky-wash); border:1.5px solid var(--hair-cool); color:var(--blue);
-  display:flex; align-items:center; justify-content:center; }
-.card__hd h3{ font-size:16px; letter-spacing:.04em; margin-bottom:6px; }
-.card__hd p{ font-size:13.5px; color:var(--muted); line-height:1.5; }
-.card .lic{ border-top:1px solid var(--hair); margin-top:0; padding-top:14px; }
-.card .lic + .lic{ margin-top:14px; }
 
 /* ---------- payments accepted ------------------------------------------- */
 .pay{ display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin-top:30px;
@@ -717,12 +737,11 @@ section[id]{ scroll-margin-top:92px; }
   .counties,.creds2{ grid-template-columns:1fr; }
   .exp{ padding:34px 28px; }
   .exp__stats{ grid-template-columns:1fr; gap:22px; }
-  .phero .wrap{ padding-top:62px; padding-bottom:46px; }
 }
 
 @media (max-width:680px){
   .frees{ grid-template-columns:1fr; }
-  .county,.card{ padding:26px 22px; }
+  .county{ padding:26px 22px; }
   .invest{ padding:22px 24px; }
   /* the auto margin would otherwise strand the note against the right edge
      once the band has wrapped into a single column */
@@ -802,7 +821,6 @@ section[id]{ scroll-margin-top:92px; }
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.1z"/></svg>
         Call Now &#8212; Free Consultation
       </a>
-      <a class="btn btn--white" href="#service">What We Do For Free</a>
     </div>
   </div>
 </section>

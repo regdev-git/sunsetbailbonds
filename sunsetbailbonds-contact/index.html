@@ -624,16 +624,19 @@ section[id]{ scroll-margin-top:92px; }
    ========================================================================== */
 
 /* ---------- big click-to-call buttons ------------------------------------ */
+/* Dark navy reads as "the footer colour" wherever it shows up elsewhere on
+   the page, so these use a deep bronze-gold instead -- #7A5A10 keeps white
+   text at 6.4:1 contrast (hover #8C6512 at 5.3:1), navy stays footer-only. */
 .callbig{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
 .callbig > *{ min-width:0; }
 .callbtn{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;
-  background:var(--navy); border-radius:var(--r); padding:32px 20px;
+  background:#7A5A10; border-radius:var(--r); padding:32px 20px;
   transition:background .16s ease, transform .16s ease; }
-.callbtn:hover{ background:var(--blue); transform:translateY(-3px); }
-.callbtn__ico{ width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.14);
-  color:var(--gold); display:flex; align-items:center; justify-content:center; }
+.callbtn:hover{ background:#8C6512; transform:translateY(-3px); }
+.callbtn__ico{ width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.16);
+  color:#fff; display:flex; align-items:center; justify-content:center; }
 .callbtn__county{ font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
-  color:rgba(255,255,255,.7); }
+  color:rgba(255,255,255,.85); }
 .callbtn__num{ font-family:var(--display); font-size:21px; font-weight:700; color:#fff;
   font-variant-numeric:tabular-nums; }
 .callbig__foot{ margin-top:34px; display:flex; justify-content:center; }
@@ -657,15 +660,16 @@ section[id]{ scroll-margin-top:92px; }
 .cform button{ align-self:flex-start; margin-top:4px; border:none; cursor:pointer; }
 .cform__note{ font-size:12.5px; color:var(--muted); margin-top:-6px; }
 
-.cinfo{ background:var(--navy); color:#C6D6E3; border-radius:var(--r); padding:36px; }
+/* same deep bronze-gold as .callbtn -- see note above the block */
+.cinfo{ background:#7A5A10; color:rgba(255,255,255,.85); border-radius:var(--r); padding:36px; }
 .cinfo h3{ color:#fff; font-size:17px; margin-bottom:10px; }
 .cinfo__lede{ font-size:14px; line-height:1.6; margin-bottom:24px; }
 .cinfo__email{ display:block; font-family:var(--display); font-size:19px; font-weight:700;
-  color:var(--gold); margin-bottom:22px; word-break:break-word; }
-.cinfo__email:hover{ color:#FFC93A; }
-.cinfo__loc{ display:flex; align-items:center; gap:10px; font-size:14px; color:#C6D6E3;
-  padding-top:22px; border-top:1px solid #1C4568; }
-.cinfo__loc svg{ flex:none; color:var(--gold); }
+  color:#FFDD82; margin-bottom:22px; word-break:break-word; }
+.cinfo__email:hover{ color:#fff; }
+.cinfo__loc{ display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,.85);
+  padding-top:22px; border-top:1px solid rgba(255,255,255,.22); }
+.cinfo__loc svg{ flex:none; color:#FFDD82; }
 .cinfo .live{ margin-top:22px; }
 
 /* ---------- licenses: wide gold-framed band ------------------------------- */
