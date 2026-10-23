@@ -248,8 +248,13 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
 
 .creds{ margin-top:30px; border-top:2px solid var(--gold); padding-top:22px; }
 .creds ul{ list-style:none; margin:0; padding:0; display:grid;
-  grid-template-columns:1fr 1fr; gap:10px 22px; }
-.creds li{ display:flex; gap:10px; align-items:flex-start; font-size:14px; font-weight:600; color:var(--navy); }
+  grid-template-columns:1fr 1fr; gap:12px 14px; }
+/* each credential sits in its own framed box -- the partner wants these two
+   carrying more weight than a plain bullet. Grid stretch keeps the pair level
+   even though the association line wraps to two rows. */
+.creds li{ display:flex; gap:10px; align-items:flex-start; font-size:14px; font-weight:600; color:var(--navy);
+  background:var(--gold-wash); border:1.5px solid var(--gold); border-radius:var(--r-sm);
+  padding:14px 16px; }
 .creds li svg{ flex:none; margin-top:4px; color:var(--gold-deep); }
 
 /* ==========================================================================
