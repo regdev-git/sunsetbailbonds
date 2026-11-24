@@ -797,9 +797,11 @@ section[id]{ scroll-margin-top:92px; }
 .office__body .eyebrow{ display:block; margin-bottom:8px; }
 .office__body h3{ font-size:18px; margin-bottom:10px; }
 .office__addr{ font-size:14px; color:var(--body); line-height:1.55; margin-bottom:18px; }
-.office__dir{ margin-top:auto; display:inline-flex; align-items:center; gap:7px;
+.office__links{ margin-top:auto; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.office__dir{ display:inline-flex; align-items:center; gap:7px;
   font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase;
-  color:var(--gold-deep); align-self:flex-start; }
+  color:var(--gold-deep); }
+.office__dir--reviews{ color:var(--blue); }
 .office__dir::after{ content:"\2192"; font-size:14px; letter-spacing:0;
   transition:transform .2s ease; }
 .office__dir:hover::after{ transform:translateX(4px); }
@@ -1009,7 +1011,10 @@ section[id]{ scroll-margin-top:92px; }
           <span class="eyebrow">Los Angeles County</span>
           <h3>Santa Monica</h3>
           <p class="office__addr">2118 Wilshire Blvd., #841<br>Santa Monica, CA 90403</p>
-          <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=2118%20Wilshire%20Blvd.%20%23841%2C%20Santa%20Monica%2C%20CA%2090403" target="_blank" rel="noopener">Get Directions</a>
+          <div class="office__links">
+            <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=2118%20Wilshire%20Blvd.%20%23841%2C%20Santa%20Monica%2C%20CA%2090403" target="_blank" rel="noopener">Get Directions</a>
+            <a class="office__dir office__dir--reviews" href="https://www.google.com/maps/place/?q=place_id:ChIJU3IvwUu7woAR5jxLx5eMx4w" target="_blank" rel="noopener">Read Reviews</a>
+          </div>
         </div>
       </div>
 
@@ -1021,7 +1026,10 @@ section[id]{ scroll-margin-top:92px; }
           <span class="eyebrow">Orange County</span>
           <h3>Newport Beach / Irvine</h3>
           <p class="office__addr">3848 Campus Dr., Suite 203<br>Newport Beach, CA 92660</p>
-          <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=3848%20Campus%20Dr.%20Suite%20203%2C%20Newport%20Beach%2C%20CA%2092660" target="_blank" rel="noopener">Get Directions</a>
+          <div class="office__links">
+            <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=3848%20Campus%20Dr.%20Suite%20203%2C%20Newport%20Beach%2C%20CA%2092660" target="_blank" rel="noopener">Get Directions</a>
+            <a class="office__dir office__dir--reviews" href="https://www.google.com/maps/place/?q=place_id:ChIJW9sS11Xe3IAR96dw-Onh394" target="_blank" rel="noopener">Read Reviews</a>
+          </div>
         </div>
       </div>
 
@@ -1033,7 +1041,10 @@ section[id]{ scroll-margin-top:92px; }
           <span class="eyebrow">Orange County</span>
           <h3>Fullerton</h3>
           <p class="office__addr">232 West Commonwealth Ave<br>Fullerton, CA 92832</p>
-          <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=232%20West%20Commonwealth%20Ave%2C%20Fullerton%2C%20CA%2092832" target="_blank" rel="noopener">Get Directions</a>
+          <div class="office__links">
+            <a class="office__dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=232%20West%20Commonwealth%20Ave%2C%20Fullerton%2C%20CA%2092832" target="_blank" rel="noopener">Get Directions</a>
+            <a class="office__dir office__dir--reviews" href="https://www.google.com/maps/place/?q=place_id:ChIJewtA9Qgq3YARImR8CdtItSM" target="_blank" rel="noopener">Read Reviews</a>
+          </div>
         </div>
       </div>
     </div>
