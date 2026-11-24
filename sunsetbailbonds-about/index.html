@@ -244,10 +244,10 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
    the CPA one (that's the Board of Accountancy), so both now open the
    actual licence image in a popup instead of linking out */
 .lic{ display:block; width:100%; text-align:left; font-size:13.5px; font-weight:700;
-  color:var(--blue); margin-top:8px; font-variant-numeric:tabular-nums;
+  color:var(--blue); margin-top:15px; font-variant-numeric:tabular-nums;
   background:none; border:0; padding:0; cursor:pointer; font-family:inherit; }
 .lic:hover{ color:var(--gold-deep); }
-.lic small{ display:block; font-weight:500; font-size:11.5px; color:var(--muted); }
+.lic small{ display:block; margin-top:3px; font-weight:500; font-size:11.5px; color:var(--muted); }
 
 /* ---------- popups: shared overlay + license verification + find-them form ------- */
 .modal{ position:fixed; inset:0; z-index:200; display:flex;
@@ -260,11 +260,14 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
   padding:20px; max-width:min(720px,92vw); max-height:88vh; overflow:auto;
   box-shadow:0 30px 70px -20px rgba(8,36,56,.5); }
 .licmodal__box img{ display:block; width:100%; height:auto; border-radius:var(--r-sm); }
+/* inset, not poking outside the box -- a negative offset could land above
+   y=0 (off-screen, nothing to click) on a short viewport once the box's
+   own height pushed it there */
 .licmodal__close,
-.findmodal__close{ position:absolute; top:-14px; right:-14px; width:36px; height:36px;
-  border-radius:50%; background:var(--navy); color:#fff; border:3px solid #fff;
-  font-size:20px; line-height:1; cursor:pointer; display:flex; align-items:center;
-  justify-content:center; box-shadow:0 6px 18px rgba(8,36,56,.35); z-index:1; }
+.findmodal__close{ position:absolute; top:14px; right:14px; width:34px; height:34px;
+  border-radius:50%; background:var(--navy); color:#fff; border:0;
+  font-size:19px; line-height:1; cursor:pointer; display:flex; align-items:center;
+  justify-content:center; box-shadow:0 6px 16px rgba(8,36,56,.35); z-index:2; }
 .licmodal__close:hover,
 .findmodal__close:hover{ background:var(--gold-deep); }
 
@@ -285,7 +288,7 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
   transition:border-color .16s ease, background .16s ease; }
 .findform input:focus, .findform select:focus{ outline:none; border-color:var(--sky); background:#fff; }
 .findform__row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.findform button{ margin-top:4px; border:none; cursor:pointer; }
+.findform button{ margin-top:4px; border:none; cursor:pointer; justify-content:center; }
 
 .findform__thanks h3{ font-size:19px; margin-bottom:10px; }
 .findform__thanks p{ font-size:14px; color:var(--muted); margin-bottom:20px; }
@@ -293,8 +296,6 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
 @media (max-width:680px){
   .licmodal__box{ padding:14px; }
   .findmodal__box{ padding:26px 22px; }
-  .licmodal__close,
-  .findmodal__close{ top:-12px; right:-12px; width:32px; height:32px; font-size:17px; }
   .findform__row{ grid-template-columns:1fr; gap:16px; }
 }
 .never{ display:inline-block; margin-top:12px; font-size:11.5px; font-weight:800; letter-spacing:.11em;
@@ -393,7 +394,7 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
 .jail h2{ margin:14px 0 16px; }
 .jail p{ font-size:15.5px; color:var(--body); }
 .jrow{ display:flex; align-items:center; justify-content:space-between; gap:18px;
-  background:#fff; padding:17px 20px; border-left:4px solid var(--gold);
+  background:#fff; padding:17px 20px; border:0; border-left:4px solid var(--gold);
   border-radius:var(--r-sm); transition:transform .16s ease; }
 .jrow + .jrow{ margin-top:10px; }
 .jrow:hover{ transform:translateX(4px); }
@@ -879,7 +880,7 @@ section[id]{ scroll-margin-top:92px; }
         <a href="#contact">Contact</a>
       </nav>
       <div class="hdr__cta">
-        <a class="btn btn--outline btn--sm" href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#jail">Search Jail Records</a>
+        <a class="btn btn--outline btn--sm" href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-jail-records/">Search Jail Records</a>
         <span class="lang"><b>EN</b> | <a href="#top">ES</a></span>
       </div>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -890,7 +891,7 @@ section[id]{ scroll-margin-top:92px; }
     <div class="wrap">
       <a href="#story">About Us</a><a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#steps">Bail Process</a><a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#faq">FAQ</a>
       <a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#blog">Bail Resource Center</a>
-      <a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#loc">California Courts</a><a href="#contact">Contact</a><a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#jail">Search Jail Records</a>
+      <a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-home-v2/#loc">California Courts</a><a href="#contact">Contact</a><a href="https://regdev-git.github.io/sunsetbailbonds/sunsetbailbonds-jail-records/">Search Jail Records</a>
     </div>
   </div>
 </header>
@@ -1442,6 +1443,18 @@ section[id]{ scroll-margin-top:92px; }
       findform.hidden = true;
       var thanks = document.getElementById('findformThanks');
       if (thanks) thanks.hidden = false;
+    });
+  }
+
+  // Phone field: digits only, auto-grouped as 310-903-8422 while typing.
+  var findPhone = document.getElementById('findPhone');
+  if (findPhone) {
+    findPhone.addEventListener('input', function(){
+      var d = findPhone.value.replace(/\D/g, '').slice(0, 10);
+      var out = d;
+      if (d.length > 6) out = d.slice(0,3) + '-' + d.slice(3,6) + '-' + d.slice(6);
+      else if (d.length > 3) out = d.slice(0,3) + '-' + d.slice(3);
+      findPhone.value = out;
     });
   }
 })();
