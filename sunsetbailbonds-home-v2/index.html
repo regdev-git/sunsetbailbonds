@@ -470,10 +470,17 @@ h1.hero__h1{ font-family:var(--ui); font-size:11.5px; font-weight:800; letter-sp
 /* ==========================================================================
    REVIEWS
    ========================================================================== */
+/* three real per-office ratings, each linking to its own Google Business
+   listing -- a single blended "4.9/5" undersold Fullerton and Santa Monica,
+   which are both a genuine 5.0; this also makes the number verifiable
+   instead of a bare claim, the way other sites do it. */
+.gbadges{ display:flex; flex-wrap:wrap; gap:14px; margin-top:22px; }
 .gbadge{ display:inline-flex; align-items:center; gap:11px; border:1px solid var(--hair);
-  border-radius:999px; padding:10px 22px; }
+  border-radius:999px; padding:10px 22px; transition:border-color .16s ease, transform .16s ease; }
+a.gbadge:hover{ border-color:var(--gold); transform:translateY(-2px); }
 .gbadge b{ font-size:14px; color:var(--navy); font-variant-numeric:tabular-nums; }
 .gbadge .stars{ color:var(--gold); letter-spacing:2px; font-size:13px; }
+.gbadge small{ font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; }
 .slot{ border:1.5px dashed var(--hair-cool); padding:11px 18px; font-size:12px; color:var(--muted); border-radius:999px;
   display:inline-block; margin-top:16px; }
 
@@ -1027,7 +1034,17 @@ details[open] summary{ color:var(--gold-deep); }
       <span class="eyebrow">Testimonials</span>
       <h2>Real families. Real stories.</h2>
       <p class="lede">What our clients say when it mattered most.</p>
-      <div style="margin-top:22px"><span class="gbadge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>Google 4.9 / 5</b></span></div>
+      <div class="gbadges">
+        <a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJU3IvwUu7woAR5jxLx5eMx4w" target="_blank" rel="noopener">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>5.0</b><small>Santa Monica</small>
+        </a>
+        <a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJW9sS11Xe3IAR96dw-Onh394" target="_blank" rel="noopener">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>4.9</b><small>Newport Beach</small>
+        </a>
+        <a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJewtA9Qgq3YARImR8CdtItSM" target="_blank" rel="noopener">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>5.0</b><small>Fullerton</small>
+        </a>
+      </div>
       <span class="slot">Trustindex / Google Reviews widget loads here</span>
     </div>
 
