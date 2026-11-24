@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-color="lime">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Bail Bonds — Variant 3 (Awwwards Handdrawn Glass)</title>
+  <meta name="description" content="Awwwards Liquid Glass Spatial Design for Sunset Bail Bonds">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="variant3.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Fluid Background Orbs -->
+  <div class="liquid-canvas-bg">
+    <div class="fluid-orb orb-primary"></div>
+    <div class="fluid-orb orb-secondary"></div>
+    <div class="fluid-orb orb-tertiary"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Top Control Bar -->
+  <div class="control-bar">
+    <div class="control-container">
+
+      <div class="variant-picker">
+        <a href="variant1.html" class="variant-btn">1</a>
+        <a href="variant2.html" class="variant-btn">2</a>
+        <a href="variant3.html" class="variant-btn active">3</a>
+        <a href="variant4.html" class="variant-btn">4</a>
+        <a href="variant5.html" class="variant-btn">5</a>
+        <a href="variant6.html" class="variant-btn">6</a>
+        <a href="variant7.html" class="variant-btn">7</a>
+        <a href="variant8.html" class="variant-btn">8</a>
+      </div>
+
+      <div class="color-picker">
+        <span class="color-picker-label">Color:</span>
+        <button class="color-dot active" data-c="amber" title="Golden Sunset Amber" style="background: #F59E0B;"></button>
+        <button class="color-dot" data-c="lime" title="Pacific Coast Lime" style="background: #BEF264;"></button>
+        <button class="color-dot" data-c="blue" title="Ocean Blue" style="background: #3B82F6;"></button>
+        <button class="color-dot" data-c="orange" title="Coral Sunset" style="background: #F97316;"></button>
+        <button class="color-dot" data-c="teal" title="Coastal Teal" style="background: #14B8A6;"></button>
+        <button class="color-dot" data-c="purple" title="Twilight Purple" style="background: #8B5CF6;"></button>
+        <button class="color-dot" data-c="gold" title="Vibrant Sun Gold" style="background: #FFD700;"></button>
+      </div>
+
+      <div class="control-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <span class="theme-icon moon-icon">🌙 Dark</span>
+          <span class="theme-icon sun-icon">☀️ Light</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-viewport">
+
+    <!-- VARIANT 3 DISTINCT HEADER: 2-ROW CENTERED BRANDED HEADER -->
+    <div class="v3-top-hotline-bar">
+      <div class="v3-hotline-container">
+
+        <div class="live-agent-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text" data-en="LIVE AGENT 24 HRS" data-es="AGENTE EN VIVO 24 HRS">LIVE AGENT 24 HRS</span>
+        </div>
+
+        <div class="county-phones">
+          <a href="tel:310-903-8422" class="phone-link">
+            <span class="county-name">Los Angeles</span>
+            <span class="phone-num">310-903-8422</span>
+          </a>
+          <span class="phone-sep">|</span>
+          <a href="tel:714-309-6359" class="phone-link">
+            <span class="county-name">Orange County</span>
+            <span class="phone-num">714-309-6359</span>
+          </a>
+          <span class="phone-sep">|</span>
+          <a href="tel:619-609-8205" class="phone-link">
+            <span class="county-name">San Diego</span>
+            <span class="phone-num">619-609-8205</span>
+          </a>
+          <span class="phone-sep">|</span>
+          <a href="tel:530-784-3062" class="phone-link">
+            <span class="county-name">Nor-Cal</span>
+            <span class="phone-num">530-784-3062</span>
+          </a>
+        </div>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="langEN">EN</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" id="langES">ES</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MAIN HEADER: CENTERED LOGO + NAV BELOW -->
+    <header class="v3-main-header">
+      <div class="v3-header-container">
+
+        <!-- Centered Logo -->
+        <a href="variant3.html" class="v3-center-logo">
+          <div class="logo-mark">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5" />
+              <path d="M8 20C11.5 15.5 20.5 15.5 24 20" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <circle cx="16" cy="11" r="3.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-brand">SUNSET BAIL BONDS</span>
+            <span class="logo-sub">A PROFESSIONAL BAIL BOND COMPANY</span>
+          </div>
+        </a>
+
+        <!-- Center Nav + Right CTA Button -->
+        <div class="v3-nav-row">
+          <nav class="nav-menu">
+            <a href="#about" class="nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+
+            <div class="nav-dropdown">
+              <button class="dropdown-toggle" data-en="Bail Process ▾" data-es="Proceso de Fianza ▾">Bail Process
+                ▾</button>
+              <div class="dropdown-menu">
+                <a href="#" data-en="How Bail Works" data-es="Cómo Funciona la Fianza">How Bail Works</a>
+                <a href="#" data-en="Bail Cost & Payment" data-es="Costo y Pago de Fianza">Bail Cost & Payment</a>
+                <a href="#" data-en="Release Process" data-es="Proceso de Liberación">Release Process</a>
+              </div>
+            </div>
+
+            <a href="#faq" class="nav-link" data-en="FAQ" data-es="Preguntas Frecuentes">FAQ</a>
+            <a href="#testimonials" class="nav-link" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+
+            <div class="nav-dropdown">
+              <button class="dropdown-toggle" data-en="Bail Resource Center ▾" data-es="Centro de Recursos ▾">Bail
+                Resource Center ▾</button>
+              <div class="dropdown-menu">
+                <a href="#" data-en="Inmate Locator" data-es="Buscador de Reclusos">Inmate Locator</a>
+                <a href="#" data-en="Bail Laws & Rights" data-es="Leyes y Derechos">Bail Laws & Rights</a>
+              </div>
+            </div>
+
+            <div class="nav-dropdown">
+              <button class="dropdown-toggle" data-en="California Courts ▾" data-es="Tribunales de CA ▾">California
+                Courts ▾</button>
+              <div class="dropdown-menu">
+                <a href="#" data-en="LA County Courts" data-es="Cortes de LA">LA County Courts</a>
+                <a href="#" data-en="Orange County Courts" data-es="Cortes de Orange">Orange County Courts</a>
+                <a href="#" data-en="San Diego Courts" data-es="Cortes de San Diego">San Diego Courts</a>
+              </div>
+            </div>
+
+            <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+          </nav>
+
+          <a href="#jail-records" class="btn-v3-header-cta">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span data-en="Search Jail Records" data-es="Buscar Registros de Cárcel">Search Jail Records</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- VARIANT 3 SPATIAL HERO WITH HANDDRAWN UNDERLINE & HIGH CONTRAST BADGE -->
+    <main class="spatial-hero-section">
+      <div class="spatial-container">
+
+        <!-- Top Badge with HIGH CONTRAST dark text on solid accent background -->
+        <div class="v3-contrast-badge">
+          <span class="badge-sparkle">✦</span>
+          <span data-en="LICENSED CALIFORNIA BAIL AGENTS — 30+ YEARS EXPERIENCE"
+            data-es="AGENTES LICENCIADOS EN CA — 30+ AÑOS DE EXPERIENCIA">LICENSED CALIFORNIA BAIL AGENTS — 30+ YEARS
+            EXPERIENCE</span>
+        </div>
+
+        <!-- Headline with HANDDRAWN UNDERLINE (NO BACKGROUND BOX!) -->
+        <h1 class="spatial-title">
+          <span class="title-top-row" data-en="Your loved one" data-es="Su ser querido">Your loved one</span><br>
+          <span class="handdraw-container">
+            <span class="handdraw-text" data-en="can be home tonight." data-es="puede estar en casa hoy.">can be home
+              tonight.</span>
+            <svg class="handdraw-underline" viewBox="0 0 500 24" fill="none" preserveAspectRatio="none">
+              <path d="M5 18 C 120 4, 300 22, 495 12" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </span>
+        </h1>
+
+        <p class="spatial-subtitle"
+          data-en="We answer every call — day or night. Licensed California bail agents with 30+ years of experience."
+          data-es="Respondemos cada llamada, día o noche. Agentes de fianza licenciados en California con más de 30 años de experiencia.">
+          We answer every call — day or night. Licensed California bail agents with 30+ years of experience.
+        </p>
+
+        <!-- 3D SPATIAL DOCK CARDS -->
+        <div class="spatial-glass-dock">
+
+          <div class="dock-card card-primary">
+            <div class="card-glow-bg"></div>
+            <div class="card-icon-circle">📞</div>
+            <div class="card-content">
+              <span class="card-tag">24/7 DIRECT LINE</span>
+              <h3 class="card-title">Call Agent Now</h3>
+              <p class="card-desc">Free confidential consultation with licensed CA bail agent.</p>
+              <a href="tel:310-903-8422" class="btn-dock-action">
+                <span>310-903-8422</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dock-card card-widget">
+            <div class="card-icon-circle">🔍</div>
+            <div class="card-content">
+              <span class="card-tag">FREE INMATE LOCATOR</span>
+              <h3 class="card-title">Search Jail Records</h3>
+              <div class="dock-input-group">
+                <input type="text" placeholder="Enter Inmate Name or Booking #" class="dock-glass-input">
+                <button class="btn-dock-search">Search ↵</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dock-card card-trust">
+            <div class="card-icon-circle">⚡</div>
+            <div class="card-content">
+              <span class="card-tag">FAST RELEASE PROCESS</span>
+              <h3 class="card-title">How Bail Works</h3>
+              <p class="card-desc">Zero hidden fees. Flexible monthly payment plans available.</p>
+              <a href="#how-bail-works" class="btn-dock-secondary">
+                <span>▶ View Step-by-Step Guide</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SPATIAL FLOATING AGENT BAR -->
+        <div class="spatial-agent-bar">
+          <div class="agent-avatar-ring">
+            <img src="images/agent1.png" alt="Licensed Bail Agent" class="ring-img">
+            <span class="ring-status"></span>
+          </div>
+          <div class="agent-info">
+            <div class="agent-name">Licensed California Bail Specialist</div>
+            <div class="agent-meta">★ 4.9 Rating (2,400+ Families Reunited) • 100% Confidential</div>
+          </div>
+        </div>
+
+        <!-- 4 TRUST INDICATORS -->
+        <div class="spatial-trust-ribbon">
+          <div class="t-pill"><span class="check">✓</span> <span data-en="Confidential"
+              data-es="Confidencial">Confidential</span></div>
+          <div class="t-pill"><span class="check">✓</span> <span data-en="No hidden fees"
+              data-es="Sin cargos ocultos">No hidden fees</span></div>
+          <div class="t-pill"><span class="check">✓</span> <span data-en="Flexible payment plans"
+              data-es="Planes de pago flexibles">Flexible payment plans</span></div>
+          <div class="t-pill"><span class="check">✓</span> <span data-en="We explain everything first"
+              data-es="Explicamos todo primero">We explain everything first</span></div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="shared.js"></script>
+</body>
+
+</html>

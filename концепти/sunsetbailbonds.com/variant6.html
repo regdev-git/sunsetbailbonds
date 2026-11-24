@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-color="amber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Bail Bonds — Variant 6 (California Surf Video Experience)</title>
+  <meta name="description" content="Cinematic California Surf Video Experience for Sunset Bail Bonds">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="variant6.css">
+</head>
+<body>
+
+  <!-- Top Control Bar -->
+  <div class="control-bar">
+    <div class="control-container">
+      
+      <div class="variant-picker">
+        <a href="variant1.html" class="variant-btn">1</a>
+        <a href="variant2.html" class="variant-btn">2</a>
+        <a href="variant3.html" class="variant-btn">3</a>
+        <a href="variant4.html" class="variant-btn">4</a>
+        <a href="variant5.html" class="variant-btn">5</a>
+        <a href="variant6.html" class="variant-btn active">6</a>
+        <a href="variant7.html" class="variant-btn">7</a>
+        <a href="variant8.html" class="variant-btn">8</a>
+      </div>
+
+      <div class="color-picker">
+        <span class="color-picker-label">Color:</span>
+        <button class="color-dot active" data-c="amber" title="Golden Sunset Amber" style="background: #F59E0B;"></button>
+        <button class="color-dot" data-c="lime" title="Pacific Coast Lime" style="background: #BEF264;"></button>
+        <button class="color-dot" data-c="blue" title="Ocean Blue" style="background: #3B82F6;"></button>
+        <button class="color-dot" data-c="orange" title="Coral Sunset" style="background: #F97316;"></button>
+        <button class="color-dot" data-c="teal" title="Coastal Teal" style="background: #14B8A6;"></button>
+        <button class="color-dot" data-c="purple" title="Twilight Purple" style="background: #8B5CF6;"></button>
+        <button class="color-dot" data-c="gold" title="Vibrant Sun Gold" style="background: #FFD700;"></button>
+      </div>
+
+      <div class="control-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <span class="theme-icon moon-icon">🌙 Dark</span>
+          <span class="theme-icon sun-icon">☀️ Light</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN BACKGROUND VIDEO WITH USER MAN SURF VIDEO -->
+  <div class="v6-video-viewport">
+    <video class="v6-bg-video-element" id="surfVideo" autoplay loop muted playsinline>
+      <source src="images/455988_Man_Surf_1280x720.mp4" type="video/mp4">
+      <source src="images/surfing_bg.mp4" type="video/mp4">
+    </video>
+    <div class="v6-cinematic-overlay"></div>
+  </div>
+
+  <div class="showcase-viewport">
+    
+    <div class="v6-cinematic-page">
+      
+      <!-- SLEEK GLASS FLOATING HEADER -->
+      <div class="v6-header-wrapper">
+        <header class="v6-glass-header-bar">
+          
+          <a href="variant6.html" class="v6-logo">
+            <span class="v6-logo-icon">🏄</span>
+            <div class="v6-logo-text">
+              <span class="v6-brand-name">SUNSET BAIL BONDS</span>
+              <span class="v6-brand-tag">CALIFORNIA COASTAL AGENTS</span>
+            </div>
+          </a>
+
+          <!-- ALL 7 NAV MENU ITEMS WITH DROPDOWNS -->
+          <nav class="v6-nav-links">
+            <a href="#about" class="v6-nav-item" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+            
+            <div class="v6-dropdown">
+              <button class="v6-dropdown-btn" data-en="Bail Process ▾" data-es="Proceso ▾">Bail Process ▾</button>
+              <div class="v6-dropdown-content">
+                <a href="#" data-en="How Bail Works" data-es="Cómo Funciona">How Bail Works</a>
+                <a href="#" data-en="Bail Cost & Payment" data-es="Costo y Pago">Bail Cost & Payment</a>
+                <a href="#" data-en="Release Process" data-es="Proceso de Liberación">Release Process</a>
+              </div>
+            </div>
+
+            <a href="#faq" class="v6-nav-item" data-en="FAQ" data-es="FAQ">FAQ</a>
+            <a href="#testimonials" class="v6-nav-item" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+            
+            <div class="v6-dropdown">
+              <button class="v6-dropdown-btn" data-en="Resource Center ▾" data-es="Recursos ▾">Resource Center ▾</button>
+              <div class="v6-dropdown-content">
+                <a href="#" data-en="Inmate Locator" data-es="Buscador de Reclusos">Inmate Locator</a>
+                <a href="#" data-en="Bail Laws & Rights" data-es="Leyes y Derechos">Bail Laws & Rights</a>
+              </div>
+            </div>
+
+            <div class="v6-dropdown">
+              <button class="v6-dropdown-btn" data-en="CA Courts ▾" data-es="Cortes ▾">CA Courts ▾</button>
+              <div class="v6-dropdown-content">
+                <a href="#" data-en="LA County Courts" data-es="Cortes de LA">LA County Courts</a>
+                <a href="#" data-en="Orange County Courts" data-es="Cortes de Orange">Orange County Courts</a>
+                <a href="#" data-en="San Diego Courts" data-es="Cortes de San Diego">San Diego Courts</a>
+              </div>
+            </div>
+
+            <a href="#contact" class="v6-nav-item" data-en="Contact" data-es="Contacto">Contact</a>
+          </nav>
+
+          <div class="v6-header-right">
+            <div class="lang-switcher">
+              <button class="lang-btn active" id="langEN">EN</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn" id="langES">ES</button>
+            </div>
+            <a href="tel:310-903-8422" class="v6-call-badge">📞 (310) 903-8422</a>
+          </div>
+
+        </header>
+      </div>
+
+      <!-- MAIN HERO CONTENT AREA OVER VIDEO -->
+      <main class="v6-main-stage">
+        <div class="v6-hero-center-box">
+          
+          <div class="v6-live-status-pill">
+            <span class="pulse-green-dot"></span>
+            <span data-en="PACIFIC COASTAL EMERGENCY BAIL — 24/7 LIVE DISPATCH" data-es="FIANZAS DE EMERGENCIA PACÍFICO — 24/7 EN VIVO">PACIFIC COASTAL EMERGENCY BAIL — 24/7 LIVE DISPATCH</span>
+          </div>
+
+          <h1 class="v6-hero-title">
+            Reuniting Your Family.<br>
+            <span class="v6-highlight-gold">Back Home Tonight.</span>
+          </h1>
+
+          <p class="v6-hero-subtext" data-en="When unexpected waves hit, we bring your loved one back where they belong. Fast, confidential 24/7 California licensed bail release across all 58 counties." data-es="Cuando golpean olas inesperadas, traemos a su ser querido de regreso a casa. Liberación rápida 24/7 en los 58 condados.">
+            When unexpected waves hit, we bring your loved one back where they belong. Fast, confidential 24/7 California licensed bail release across all 58 counties.
+          </p>
+
+          <!-- SLEEK GLASS DOCK WIDGET (INMATE LOOKUP & CALL) -->
+          <div class="v6-glass-dock-bar">
+            
+            <div class="v6-dock-search">
+              <span class="v6-dock-icon">🔍</span>
+              <input type="text" placeholder="Enter Inmate Name or Booking #" class="v6-dock-input">
+              <button class="v6-dock-btn-search" data-en="SEARCH JAIL" data-es="BUSCAR">SEARCH RECORDS</button>
+            </div>
+
+            <a href="tel:310-903-8422" class="v6-dock-btn-call">
+              <span>📞 CALL NOW — (310) 903-8422</span>
+            </a>
+
+          </div>
+
+          <!-- REGIONAL COUNTY HOTLINES PILLS DOCK -->
+          <div class="v6-county-pills-row">
+            <a href="tel:310-903-8422" class="v6-pill-item">
+              <span class="tag">LOS ANGELES</span>
+              <span class="num">310-903-8422</span>
+            </a>
+            <a href="tel:714-309-6359" class="v6-pill-item">
+              <span class="tag">ORANGE COUNTY</span>
+              <span class="num">714-309-6359</span>
+            </a>
+            <a href="tel:619-609-8205" class="v6-pill-item">
+              <span class="tag">SAN DIEGO</span>
+              <span class="num">619-609-8205</span>
+            </a>
+            <a href="tel:530-784-3062" class="v6-pill-item">
+              <span class="tag">NOR-CAL</span>
+              <span class="num">530-784-3062</span>
+            </a>
+          </div>
+
+          <!-- TRUST BADGES -->
+          <div class="v6-trust-line">
+            <span>🌅 100% Confidential</span>
+            <span>🏄 No Hidden Fees</span>
+            <span>🌴 Flexible Payment Plans</span>
+            <span>🤝 We Explain Everything</span>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- BOTTOM CINEMATIC MARQUEE -->
+      <footer class="v6-bottom-marquee">
+        <div class="v6-marquee-content">
+          <span>🌴 REUNITING CALIFORNIA FAMILIES SINCE 1994</span>
+          <span class="dot">•</span>
+          <span>🏄 ALL 58 COUNTIES COVERED 24/7/365</span>
+          <span class="dot">•</span>
+          <span>🌅 100% CONFIDENTIAL BAIL RELEASE</span>
+          <span class="dot">•</span>
+          <span>📞 CALL DIRECT: (310) 903-8422</span>
+          <span class="dot">•</span>
+          <span>🤝 ZERO HIDDEN FEES & FLEXIBLE PAYMENTS</span>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <script src="shared.js"></script>
+</body>
+</html>

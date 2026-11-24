@@ -1,0 +1,550 @@
+/* ==========================================================================
+   SUNSET BAIL BONDS — VARIANT 7 (CALIFORNIA LIFESTYLE FULL-WIDTH VIDEO)
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  --border-line: rgba(15, 23, 42, 0.1);
+  --shadow-card: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --control-bar-h: 60px;
+
+  /* VIBRANT SUN GOLD DEFAULT */
+  --accent-color: #FFD700;
+  --accent-dark: #D4AF37;
+  --cta-bg: #FFD700;
+  --cta-text: #0F172A;
+  --badge-bg: rgba(255, 215, 0, 0.15);
+  --badge-text: #B45309;
+}
+
+[data-color="amber"] {
+  --accent-color: #F59E0B;
+  --accent-dark: #D97706;
+  --cta-bg: #F59E0B;
+  --cta-text: #0F172A;
+  --badge-bg: rgba(245, 158, 11, 0.12);
+  --badge-text: #B45309;
+}
+
+[data-color="lime"] {
+  --accent-color: #84CC16;
+  --accent-dark: #65A30D;
+  --cta-bg: #84CC16;
+  --cta-text: #0F172A;
+  --badge-bg: rgba(132, 204, 22, 0.12);
+  --badge-text: #3F6212;
+}
+
+[data-color="blue"] {
+  --accent-color: #2563EB;
+  --accent-dark: #1D4ED8;
+  --cta-bg: #2563EB;
+  --cta-text: #FFFFFF;
+  --badge-bg: rgba(37, 99, 235, 0.1);
+  --badge-text: #1E40AF;
+}
+
+[data-color="orange"] {
+  --accent-color: #F97316;
+  --accent-dark: #C2410C;
+  --cta-bg: #F97316;
+  --cta-text: #FFFFFF;
+  --badge-bg: rgba(249, 115, 22, 0.1);
+  --badge-text: #C2410C;
+}
+
+[data-color="teal"] {
+  --accent-color: #0D9488;
+  --accent-dark: #0F766E;
+  --cta-bg: #0D9488;
+  --cta-text: #FFFFFF;
+  --badge-bg: rgba(13, 148, 136, 0.1);
+  --badge-text: #115E59;
+}
+
+[data-color="purple"] {
+  --accent-color: #9333EA;
+  --accent-dark: #7E22CE;
+  --cta-bg: #9333EA;
+  --cta-text: #FFFFFF;
+  --badge-bg: rgba(147, 51, 234, 0.1);
+  --badge-text: #6B21A8;
+}
+
+/* DARK MODE OVERRIDES */
+[data-theme="dark"] {
+  --bg-main: #0B0F17;
+  --bg-surface: #111827;
+  --bg-card: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --border-line: rgba(255, 255, 255, 0.12);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CONTROL BAR */
+.control-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--control-bar-h);
+  background: rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 9999;
+  color: #FFF;
+}
+
+.control-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.variant-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.variant-btn {
+  background: transparent;
+  color: #CBD5E1;
+  text-decoration: none;
+  width: 34px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.variant-btn:hover { background: rgba(255, 255, 255, 0.15); color: #FFF; }
+.variant-btn.active { background: var(--cta-bg); color: var(--cta-text); box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.color-picker-label { font-size: 0.75rem; font-weight: 700; color: #94A3B8; }
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-dot:hover { transform: scale(1.2); }
+.color-dot.active { border-color: #FFFFFF; transform: scale(1.25); box-shadow: 0 0 10px rgba(255,255,255,0.6); }
+
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .sun-icon { display: none; }
+[data-theme="dark"] .moon-icon { display: inline-block; }
+[data-theme="light"] .moon-icon { display: none; }
+[data-theme="light"] .sun-icon { display: inline-block; }
+
+.showcase-viewport { margin-top: var(--control-bar-h); }
+
+/* --------------------------------------------------------------------------
+   VARIANT 7 EDITORIAL LIFESTYLE FULL-WIDTH VIDEO LAYOUT
+   -------------------------------------------------------------------------- */
+.v7-page-wrapper {
+  min-height: calc(100vh - var(--control-bar-h));
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP HEADER HOTLINES STRIP WITH ALL 4 COUNTIES */
+.v7-top-notice-strip {
+  background: #37474F;
+  color: #FFFFFF;
+  padding: 8px 0;
+}
+
+.v7-notice-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.v7-counties-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.v7-h-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.v7-h-chip:hover { background: rgba(255, 255, 255, 0.18); }
+
+.v7-h-chip .c-lbl {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #B0BEC5;
+  letter-spacing: 0.05em;
+}
+
+.v7-h-chip .c-num {
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: var(--accent-color);
+}
+
+.v7-notice-right { display: flex; align-items: center; gap: 12px; }
+
+.lang-switcher { display: flex; align-items: center; gap: 4px; font-size: 0.8rem; font-weight: 800; }
+.lang-btn { background: none; border: none; color: #FFFFFF; opacity: 0.8; cursor: pointer; }
+.lang-btn.active { opacity: 1; text-decoration: underline; font-weight: 900; color: var(--accent-color); }
+
+/* EDITORIAL HEADER NAV */
+.v7-editorial-header {
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--border-line);
+  padding: 16px 0;
+}
+
+.v7-header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.v7-brand-stamp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.v7-stamp-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.v7-stamp-text { display: flex; flex-direction: column; }
+
+.v7-stamp-title {
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.v7-stamp-sub {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+.v7-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.v7-nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.v7-nav-link:hover { color: var(--accent-dark); }
+
+.v7-dropdown { position: relative; }
+
+.v7-dropdown-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+.v7-dropdown-btn:hover { color: var(--accent-dark); }
+
+.v7-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-line);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: none;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  z-index: 100;
+  margin-top: 8px;
+}
+
+.v7-dropdown:hover .v7-dropdown-content { display: flex; }
+
+.v7-dropdown-content a {
+  padding: 8px 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.v7-dropdown-content a:hover {
+  background: var(--bg-surface);
+  color: var(--accent-dark);
+}
+
+.v7-search-trigger-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   FULL-WIDTH EDGE-TO-EDGE VIDEO HERO BANNER (NO PADDINGS LEFT/RIGHT)
+   -------------------------------------------------------------------------- */
+.v7-hero-panoramic-section {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
+  overflow: visible;
+}
+
+.v7-fullwidth-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: visible;
+}
+
+.v7-hero-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.v7-video-overlay-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 10, 16, 0.25) 0%, rgba(7, 10, 16, 0.6) 100%);
+}
+
+/* ASYMMETRIC OVERLAPPING CARD WIDGET (BOTTOM RIGHT) */
+.v7-overlapping-card {
+  position: absolute;
+  bottom: -40px;
+  right: 64px;
+  width: 420px;
+  background: #455A64;
+  color: #FFFFFF;
+  padding: 28px 26px;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  z-index: 20;
+}
+
+[data-theme="dark"] .v7-overlapping-card {
+  background: #1E293B;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.v7-card-tag {
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.v7-card-headline {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.v7-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.v7-card-input {
+  background: #FFFFFF;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #0F172A;
+  outline: none;
+  font-family: inherit;
+}
+
+.v7-card-btn-submit {
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+}
+
+.v7-card-hotline {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.82rem;
+  display: block;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 12px;
+}
+
+.v7-card-hotline strong { color: var(--accent-color); }
+
+/* EDITORIAL CONTENT SECTION BELOW HERO */
+.v7-below-hero-section {
+  padding: 30px 32px 60px 32px;
+  background: var(--bg-main);
+}
+
+.v7-editorial-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.v7-editorial-left {
+  max-width: 750px;
+}
+
+.v7-editorial-title {
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.v7-serif-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: #455A64;
+}
+
+[data-theme="dark"] .v7-serif-title { color: var(--accent-color); }
+
+.v7-editorial-paragraph {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.v7-trust-row {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .v7-overlapping-card { position: static; width: 100%; margin-top: 24px; }
+  .v7-below-hero-section { padding-top: 40px; }
+  .v7-counties-header-row { flex-direction: column; align-items: flex-start; }
+}

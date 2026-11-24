@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-color="lime">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Bail Bonds — Variant 1 (Next-Gen Light/Dark)</title>
+  <meta name="description" content="Variant 1 Design for Sunset Bail Bonds">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="variant1.css">
+</head>
+
+<body>
+
+  <!-- Top Control Bar: Variant Switcher (1, 2, 3) + 6 Color Wheel Palette + Theme Toggle -->
+  <div class="control-bar">
+    <div class="control-container">
+
+      <!-- Variant Page Navigation -->
+      <div class="variant-picker">
+        <a href="variant1.html" class="variant-btn active">1</a>
+        <a href="variant2.html" class="variant-btn">2</a>
+        <a href="variant3.html" class="variant-btn">3</a>
+        <a href="variant4.html" class="variant-btn">4</a>
+        <a href="variant5.html" class="variant-btn">5</a>
+        <a href="variant6.html" class="variant-btn">6</a>
+        <a href="variant7.html" class="variant-btn">7</a>
+        <a href="variant8.html" class="variant-btn">8</a>
+      </div>
+
+      <!-- 7 Color Wheel Palette Switcher -->
+      <div class="color-picker">
+        <span class="color-picker-label">Color:</span>
+        <button class="color-dot active" data-c="amber" title="Golden Sunset Amber" style="background: #F59E0B;"></button>
+        <button class="color-dot" data-c="lime" title="Pacific Coast Lime" style="background: #BEF264;"></button>
+        <button class="color-dot" data-c="blue" title="Ocean Blue" style="background: #3B82F6;"></button>
+        <button class="color-dot" data-c="orange" title="Coral Sunset" style="background: #F97316;"></button>
+        <button class="color-dot" data-c="teal" title="Coastal Teal" style="background: #14B8A6;"></button>
+        <button class="color-dot" data-c="purple" title="Twilight Purple" style="background: #8B5CF6;"></button>
+        <button class="color-dot" data-c="gold" title="Vibrant Sun Gold" style="background: #FFD700;"></button>
+      </div>
+
+      <!-- Theme Toggle Button -->
+      <div class="control-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <span class="theme-icon moon-icon">🌙 Dark</span>
+          <span class="theme-icon sun-icon">☀️ Light</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-viewport">
+
+    <!-- Top Hotline Strip -->
+    <div class="hotline-strip">
+      <div class="hotline-container">
+
+        <!-- Live Agent Badge -->
+        <div class="live-agent-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text" data-en="LIVE AGENT 24 HRS" data-es="AGENTE EN VIVO 24 HRS">LIVE AGENT 24 HRS</span>
+        </div>
+
+        <!-- Phone Numbers by County -->
+        <div class="county-phones">
+          <a href="tel:310-903-8422" class="phone-link">
+            <span class="county-name">Los Angeles</span>
+            <span class="phone-num">310-903-8422</span>
+          </a>
+          <span class="phone-sep">•</span>
+          <a href="tel:714-309-6359" class="phone-link">
+            <span class="county-name">Orange County</span>
+            <span class="phone-num">714-309-6359</span>
+          </a>
+          <span class="phone-sep">•</span>
+          <a href="tel:619-609-8205" class="phone-link">
+            <span class="county-name">San Diego</span>
+            <span class="phone-num">619-609-8205</span>
+          </a>
+          <span class="phone-sep">•</span>
+          <a href="tel:530-784-3062" class="phone-link">
+            <span class="county-name">Nor-Cal</span>
+            <span class="phone-num">530-784-3062</span>
+          </a>
+        </div>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="langEN">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="langES">ES</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+      <div class="header-container">
+
+        <!-- Logo -->
+        <a href="variant1.html" class="logo-block">
+          <div class="logo-mark">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5" />
+              <path d="M8 20C11.5 15.5 20.5 15.5 24 20" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <circle cx="16" cy="11" r="3.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-brand">SUNSET BAIL BONDS</span>
+            <span class="logo-sub">A PROFESSIONAL BAIL BOND COMPANY</span>
+          </div>
+        </a>
+
+        <!-- Nav Links -->
+        <nav class="nav-menu">
+          <a href="#about" class="nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" data-en="Bail Process ▾" data-es="Proceso de Fianza ▾">Bail Process
+              ▾</button>
+            <div class="dropdown-menu">
+              <a href="#" data-en="How Bail Works" data-es="Cómo Funciona la Fianza">How Bail Works</a>
+              <a href="#" data-en="Bail Cost & Payment" data-es="Costo y Pago de Fianza">Bail Cost & Payment</a>
+              <a href="#" data-en="Release Process" data-es="Proceso de Liberación">Release Process</a>
+            </div>
+          </div>
+
+          <a href="#faq" class="nav-link" data-en="FAQ" data-es="Preguntas Frecuentes">FAQ</a>
+          <a href="#testimonials" class="nav-link" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" data-en="Bail Resource Center ▾" data-es="Centro de Recursos ▾">Bail
+              Resource Center ▾</button>
+            <div class="dropdown-menu">
+              <a href="#" data-en="Inmate Locator" data-es="Buscador de Reclusos">Inmate Locator</a>
+              <a href="#" data-en="Bail Laws & Rights" data-es="Leyes y Derechos">Bail Laws & Rights</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" data-en="California Courts ▾" data-es="Tribunales de CA ▾">California Courts
+              ▾</button>
+            <div class="dropdown-menu">
+              <a href="#" data-en="LA County Courts" data-es="Cortes de LA">LA County Courts</a>
+              <a href="#" data-en="Orange County Courts" data-es="Cortes de Orange">Orange County Courts</a>
+              <a href="#" data-en="San Diego Courts" data-es="Cortes de San Diego">San Diego Courts</a>
+            </div>
+          </div>
+
+          <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+        </nav>
+
+        <!-- CTA Button: Search Jail Records -->
+        <div class="header-cta-group">
+          <a href="#jail-records" class="btn-jail-records">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span data-en="Search Jail Records" data-es="Buscar Registros de Cárcel">Search Jail Records</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- HERO SECTION VARIANT 1 -->
+    <main class="hero-section">
+      <div class="hero-container v1-grid">
+        <div class="v1-left">
+          <div class="v1-pill-badge">
+            <span class="badge-icon">⚡</span>
+            <span data-en="Licensed California Bail Agents — 30+ Years Experience"
+              data-es="Agentes Licenciados en CA — 30+ Años de Experiencia">Licensed California Bail Agents — 30+ Years
+              Experience</span>
+          </div>
+
+          <h1 class="v1-title">
+            <span class="title-line" data-en="Your loved one" data-es="Su ser querido">Your loved one</span><br>
+            <span class="v1-highlight-inline" data-en="can be home tonight." data-es="puede estar en casa hoy.">can be
+              home tonight.</span>
+          </h1>
+
+          <p class="v1-subtitle"
+            data-en="We answer every call — day or night. Licensed California bail agents with 30+ years of experience."
+            data-es="Respondemos cada llamada, día o noche. Agentes de fianza licenciados en California con más de 30 años de experiencia.">
+            We answer every call — day or night. Licensed California bail agents with 30+ years of experience.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="tel:310-903-8422" class="btn-v1-primary">
+              <span data-en="📞 Call Now — Free Consultation" data-es="📞 Llamar Ahora — Consulta Gratis">📞 Call Now —
+                Free Consultation</span>
+            </a>
+            <a href="#how-bail-works" class="btn-v1-secondary">
+              <span data-en="▶ How Bail Works" data-es="▶ Cómo Funciona la Fianza">▶ How Bail Works</span>
+            </a>
+          </div>
+
+          <div class="v1-trust-ribbon">
+            <div class="t-pill"><span class="check">✓</span> <span data-en="Confidential"
+                data-es="Confidencial">Confidential</span></div>
+            <div class="t-pill"><span class="check">✓</span> <span data-en="No hidden fees"
+                data-es="Sin cargos ocultos">No hidden fees</span></div>
+            <div class="t-pill"><span class="check">✓</span> <span data-en="Flexible payment plans"
+                data-es="Planes de pago flexibles">Flexible payment plans</span></div>
+            <div class="t-pill"><span class="check">✓</span> <span data-en="We explain everything first"
+                data-es="Explicamos todo primero">We explain everything first</span></div>
+          </div>
+        </div>
+
+        <div class="v1-right">
+          <div class="v1-card-wrapper">
+            <img src="images/california_family_surfboards.png" alt="California Family Surfboards Sunset" class="v1-agent-img">
+
+            <div class="v1-floating-card float-top-right">
+              <div class="float-stars">★★★★★</div>
+              <div class="float-title">4.9 ★ Rating</div>
+              <div class="float-sub">2,400+ Families Reunited</div>
+            </div>
+
+            <div class="v1-floating-card float-bottom-left">
+              <div class="float-badge-icon">🛡️</div>
+              <div>
+                <div class="float-title">100% Confidential</div>
+                <div class="float-sub">Licensed CA Agents</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="shared.js"></script>
+</body>
+
+</html>
